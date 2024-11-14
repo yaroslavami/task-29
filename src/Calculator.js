@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 const Calculator = (props) => {
   const { x, y } = props;
@@ -10,14 +11,14 @@ const Calculator = (props) => {
   const power = () => Math.pow(x, y);
 
   return (
-    <div>
-      <p>Числа: {x} і {y}</p>
+    <div className='calculator-container'>
+      <p>Integers: {x} and {y}</p>
       <div>
-        <button onClick={() => alert(`Сума: ${add()}`)}>Додавання</button>
-        <button onClick={() => alert(`Різниця: ${subtract()}`)}>Віднімання</button>
-        <button onClick={() => alert(`Множення: ${multiply()}`)}>Множення</button>
-        <button onClick={() => alert(`Ділення: ${divide()}`)}>Ділення</button>
-        <button onClick={() => alert(`Ступінь: ${power()}`)}>Ступінь</button>
+        <button onClick={() => alert(`Sum: ${add()}`)}>Addition</button>
+        <button onClick={() => alert(`Difference: ${subtract()}`)}>Subtraction</button>
+        <button onClick={() => alert(`Multiplied: ${multiply()}`)}>Multiplication</button>
+        <button onClick={() => alert(`Divided: ${divide()}`)}>Division</button>
+        <button onClick={() => alert(`Powered: ${power()}`)}>Power of</button>
       </div>
     </div>
   );

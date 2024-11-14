@@ -3,10 +3,13 @@ import './App.css';
 import Calculator from './Calculator';
 
 function App() {
+  const x = Math.floor(Math.random() * 30) + 1;
+  const y = Math.floor(Math.random() * 10) + 1;
   return (
     <div className="App">
-      <h1>Калькулятор</h1>
-      <Calculator x={6} y={9} />
+      <h1>Random Calculator</h1>
+      <Calculator x={x} y={y} />
+      <p>Reload page to get new numbers</p>
     </div>
   );
 }
